@@ -1,0 +1,84 @@
+
+body {
+  margin: 0 auto;
+  max-width: 960px;
+  min-width: 0;
+  padding: 0 10px 25px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #111111;
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #505050;
+}
+
+a {
+  color: #C51E3A;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav a:not(:first-child) {
+  padding-left: 1em;
+}
+
+/* Grid */
+body {
+  display: grid;
+  row-gap: 0.5em;
+  grid-template-columns: auto auto;
+  grid-template-rows: 60px auto;
+  grid-template-areas:
+    "header nav"
+    "content content"
+}
+
+header {
+  grid-area: header;
+  justify-self: left;
+  align-self: end;
+}
+
+nav {
+  grid-area: nav;
+  justify-self: left;
+  align-self: end;
+}
+
+nav a {
+  text-align: right;
+}
+
+article {
+  grid-area: content;
+  border-top: 2px solid #C51E3A;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 430px) {
+  body {
+    grid-template-columns: auto;
+    grid-template-rows: minmax(40px, auto) minmax(30px, auto) auto auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "content"
+  }
+  header, nav {
+    text-align: center;
+    justify-self: center;
+  }
+  nav a {
+    margin: 0 10px;
+  }
+}
+
