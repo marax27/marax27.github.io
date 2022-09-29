@@ -89,17 +89,30 @@ article {
   border: solid 1px #111111;
   aspect-ratio: 1/ 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 5%;
+  justify-content: flex-start;
+  padding: 0.5em;
 }
 
 span.interest {
   font-weight: thin;
   font-size: 1.25em;
   text-transform: uppercase;
+  padding-bottom: 0.25em;
 }
 
+#simulations-box > #simulationWrapper { 
+  border: solid 1px #111111;
+}
+
+#simulations-box > #simulationWrapper:hover {
+  border: solid 1px #C51E3A;
+}
+
+.simulation-view {
+  position: absolute;
+}
 
 /* Responsiveness */
 @media screen and (max-width: 430px) {
