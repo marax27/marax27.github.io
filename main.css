@@ -47,7 +47,8 @@ body {
   grid-template-rows: 60px auto;
   grid-template-areas:
     "header nav"
-    "content content";
+    "content content"
+    "footer footer";
 }
 
 header {
@@ -58,6 +59,12 @@ header {
 
 nav {
   grid-area: nav;
+  justify-self: left;
+  align-self: end;
+}
+
+footer {
+  grid-area: footer;
   justify-self: left;
   align-self: end;
 }
@@ -133,6 +140,14 @@ span.interest {
   border: solid 1px #111111;
 }
 
+footer {
+  width: 100%;
+  padding-top: 1em;
+  border-top: 2px solid #202020;
+  color: #202020;
+  margin-top: 1em;
+}
+
 /* Responsiveness */
 @media screen and (max-width: 430px) {
   body {
@@ -141,10 +156,12 @@ span.interest {
     grid-template-areas:
       "header"
       "nav"
-      "content";
+      "content"
+      "footer";
   }
   header,
-  nav {
+  nav,
+  footer {
     text-align: center;
     justify-self: center;
   }
@@ -156,5 +173,6 @@ span.interest {
 @media screen and (max-width: 540px) {
   .interests {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 0.5em;
   }
 }
