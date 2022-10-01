@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A personal page." />
+    <meta name="author" content="Kacper Tonia" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ "/main.css" | relative_url }}">
+  </head>
+  <body>
+    <header>{{ page.title }}</header>
+    <nav>
+      <a href="{{ "/" | relative_url }}">About</a>
+      <a href="{{ "/writing/" | relative_url }}">Writing</a>
+    </nav>
+    <article>
+      {{ content }}
+    </article>
+    <footer>&copy; 2022 Kacper Tonia</footer>
+  </body>
+</html>
