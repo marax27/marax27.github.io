@@ -36,7 +36,7 @@ a:hover {
 }
 
 nav a:not(:first-child) {
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 /* Grid */
@@ -59,7 +59,7 @@ header {
 
 nav {
   grid-area: nav;
-  justify-self: left;
+  justify-self: right;
   align-self: end;
 }
 
